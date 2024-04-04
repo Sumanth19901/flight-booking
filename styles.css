@@ -1,39 +1,40 @@
 /* Reset default margin and padding */
 body, h1, h2, p, ul, li {
-    margin: 1;
+    margin: 0;
     padding: 0;
 }
 
 /* Global styles */
 body {
     font-family: Arial, sans-serif;
-   background-image:url(king.jpg);
+    background-image: url(king.jpg);
     background-repeat: no-repeat;
-    position: -ms-page;
+    background-size: cover; /* Ensure the background image covers the entire viewport */
     width: 100%;
-    height: 400px;
-
+    height: 100vh; /* Use viewport height for better responsiveness */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
     max-width: 500px;
-    margin: 100px auto;
     padding: 50px;
-    background-color: #ffffffb4;
+    background-color: rgba(255, 255, 255, 0.9); /* Use RGBA for background color with transparency */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(128, 216, 228, 1.5);
+    box-shadow: 0 0 20px rgba(128, 216, 228, 0.5); /* Soften the box shadow */
 }
 
 header {
-    background-color:bisque;
-    color: #fff;
+    background-color: bisque;
+    color: #333; /* Darken the text color for better contrast */
     padding: 20px 0;
     text-align: center;
-    box-shadow: 0 0 10px rgba(185, 233, 97, 2.5);
+    box-shadow: 0 0 15px rgba(185, 233, 97, 0.8); /* Soften the box shadow */
 }
 
 header h1 {
-    font-size: 24px;
+    font-size: 28px; /* Increase the font size for header */
 }
 
 form {
@@ -42,60 +43,47 @@ form {
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px; /* Increase the margin for better spacing */
     font-weight: bold;
+    color: #555; /* Darken the label color */
 }
 
 input[type="text"],
 input[type="email"],
-select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input[type="date"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ffffff;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
+select,
+input[type="date"],
 input[type="number"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: calc(100% - 18px); /* Adjust the width to account for padding and border */
+    padding: 10px;
+    margin-bottom: 15px; /* Increase the margin for better spacing */
+    border: 1px solid #999; /* Change border color for better visibility */
+    border-radius: 6px;
     box-sizing: border-box;
 }
 
 input[type="submit"] {
-    background-color: #333;
+    background-color: #ff6600; /* Orange color for submit button */
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px; /* Increase padding for better button size */
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease; /* Add transition for smoother hover effect */
 }
 
 input[type="submit"]:hover {
-    background-color: #555;
+    background-color: #ff8533; /* Lighter shade of orange on hover */
 }
 
 footer {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px; /* Increase margin for better separation */
     padding-top: 20px;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #999; /* Change border color for better visibility */
 }
 
 footer p {
-    font-size: 14px;
-    color: #666;
+    font-size: 16px; /* Increase font size for better readability */
+    color: #777; /* Darken the text color for better contrast */
+    font-style: italic; /* Add italic style for footer text */
 }
