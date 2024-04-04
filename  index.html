@@ -33,23 +33,23 @@
         <p>&copy; 2024 Carpooling Service. All rights reserved.</p>
     </footer>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+    <script>
         var fromInput = document.getElementById('from');
-var toInput = document.getElementById('to');
+        var toInput = document.getElementById('to');
 
-var autocompleteFrom = new google.maps.places.Autocomplete(fromInput);
-var autocompleteTo = new google.maps.places.Autocomplete(toInput);
-autocompleteFrom.addListener('place_changed', function() {
-    var place = autocompleteFrom.getPlace();
-    // Use place details as needed
-});
+        var autocompleteFrom = new google.maps.places.Autocomplete(fromInput);
+        var autocompleteTo = new google.maps.places.Autocomplete(toInput);
+        autocompleteFrom.addListener('place_changed', function() {
+            var place = autocompleteFrom.getPlace();
+            // Use place details as needed
+        });
 
-autocompleteTo.addListener('place_changed', function() {
-    var place = autocompleteTo.getPlace();
-    // Use place details as needed
-});
-
-</script>
+        autocompleteTo.addListener('place_changed', function() {
+            var place = autocompleteTo.getPlace();
+            // Use place details as needed
+        });
+    </script>
 
 </body>
 </html>
